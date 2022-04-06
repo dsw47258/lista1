@@ -1,13 +1,11 @@
 public class zad1 {
     public static void main(String[] args) {
-        Square s1 = new Square(5);
-        Rectangle r1 = new Rectangle(3, 4);
-        System.out.println(s1);
-        s1.calculateTheAreaOfTheFigure();
-        s1.calculateThePerimeterOfFigure();
-        System.out.println(r1);
-        r1.calculateTheAreaOfTheFigure();
-        r1.calculateThePerimeterOfFigure();
+        Figure kwadrat = new Square(3);
+        System.out.println("Obwód kwadratu: " + kwadrat.calculateThePerimeterOfFigure());
+        System.out.println("Pole kwadratu: " + kwadrat.calculateTheAreaOfTheFigure());
+        Figure prostokat = new Rectangle(4, 6);
+        System.out.println("Obwód prostokątu: " + prostokat.calculateThePerimeterOfFigure());
+        System.out.println("Pole prostokątu: " + prostokat.calculateTheAreaOfTheFigure());
 
     }
 }

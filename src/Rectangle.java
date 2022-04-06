@@ -1,12 +1,26 @@
-import static java.lang.System.*;
 
-public class Rectangle extends Figure {
+
+public class Rectangle implements Figure {
+    private int length;
+    private int width;
+
     public Rectangle(int length, int width) {
-        super(length, width);
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public String toString() {
-        return "Czworokąt: " + getLength() + getWidth();
+        return "Czworokąt: " + length + width;
+    }
+
+    @Override
+    public int calculateTheAreaOfTheFigure() {
+        return width * length;
+    }
+
+    @Override
+    public int calculateThePerimeterOfFigure() {
+        return (length + width) * 2;
     }
 }

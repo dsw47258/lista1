@@ -1,12 +1,24 @@
-import static java.lang.Math.*;
 
-public class Square extends Figure {
+public class Square implements Figure {
+    private int length;
+
     public Square(int length) {
-        super(length);
+        this.length = length;
     }
 
     @Override
     public String toString() {
-        return "Kwadrat:" + getLength();
+        return "Kwadrat:" + length;
+    }
+
+    @Override
+    public int calculateTheAreaOfTheFigure() {
+        return length * length;
+    }
+
+    @Override
+    public int calculateThePerimeterOfFigure() {
+
+        return length * 4;
     }
 }
