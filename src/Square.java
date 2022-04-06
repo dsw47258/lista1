@@ -1,24 +1,31 @@
 
 public class Square implements Figure {
-    private int length;
-
-    public Square(int length) {
-        this.length = length;
+int side1;
+int side2;
+    public Square(int side1) {
+        this.side1=side1;
+        this.side2=side1;
     }
 
     @Override
-    public String toString() {
-        return "Kwadrat:" + length;
+    public int getside1() {
+        return side1;
+    }
+
+    @Override
+    public int getside2() {
+        return side2;
     }
 
     @Override
     public int calculateTheAreaOfTheFigure() {
-        return length * length;
+        return Figure.super.calculateTheAreaOfTheFigure();
     }
 
     @Override
     public int calculateThePerimeterOfFigure() {
-
-        return length * 4;
+        return Figure.super.calculateThePerimeterOfFigure();
     }
+
+
 }

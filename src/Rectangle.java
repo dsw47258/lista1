@@ -1,26 +1,31 @@
 
 
 public class Rectangle implements Figure {
-    private int length;
-    private int width;
-
-    public Rectangle(int length, int width) {
-        this.length = length;
-        this.width = width;
+    int side1;
+    int side2;
+    public  Rectangle (int side1, int side2) {
+        this.side1=side1;
+        this.side2=side2;
     }
 
     @Override
-    public String toString() {
-        return "Czworokąt: " + length + width;
+    public int getside1() {
+        return side1;
+    }
+
+    @Override
+    public int getside2() {
+        return side2;
     }
 
     @Override
     public int calculateTheAreaOfTheFigure() {
-        return width * length;
+        return Figure.super.calculateTheAreaOfTheFigure();
     }
 
     @Override
     public int calculateThePerimeterOfFigure() {
-        return (length + width) * 2;
+        return Figure.super.calculateThePerimeterOfFigure();
     }
+
 }
