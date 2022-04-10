@@ -6,12 +6,12 @@ public class Wheel implements Figure {
     }
 
     @Override
-    public int getside1() {
+    public double getSide1() {
         return (int) r;
     }
 
     @Override
-    public int getside2() {
+    public double getSide2() {
         return 0;
     }
 
@@ -26,12 +26,12 @@ public class Wheel implements Figure {
     }
 
     @Override
-    public int calculateTheAreaOfTheFigure() {
+    public double calculateTheAreaOfTheFigure() {
         return (int) (Math.PI * r * r);
     }
 
     @Override
-    public int calculateThePerimeterOfFigure() {
+    public double calculateThePerimeterOfFigure() {
         return (int) (2 * Math.PI * r);
 
     }

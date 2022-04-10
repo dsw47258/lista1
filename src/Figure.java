@@ -1,20 +1,20 @@
 
 
 public interface Figure {
-    int getside1();
+    double getSide1();
 
-    int getside2();
+    double getSide2();
 
     void min();
 
     void max();
 
-    default int calculateTheAreaOfTheFigure() {
-        return getside1() * getside2();
+    default double calculateTheAreaOfTheFigure() {
+        return getSide1() * getSide2();
     }
 
-    default int calculateThePerimeterOfFigure() {
-        return (getside1() + getside2()) * 2;
+    default double calculateThePerimeterOfFigure() {
+        return (getSide1() + getSide2()) * 2;
     }
 
 }
