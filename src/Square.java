@@ -1,5 +1,5 @@
 
-public class Square implements Figure {
+public class Square implements IFigure {
     double side1;
     double side2;
 
@@ -33,12 +33,16 @@ public class Square implements Figure {
 
     @Override
     public double calculateTheAreaOfTheFigure() {
-        return Figure.super.calculateTheAreaOfTheFigure();
+        return IFigure.super.calculateTheAreaOfTheFigure();
     }
 
     @Override
     public double calculateThePerimeterOfFigure() {
-        return Figure.super.calculateThePerimeterOfFigure();
+        return IFigure.super.calculateThePerimeterOfFigure();
+    }
+    @Override
+    public String toString(){
+        return "Kwadrat, jego bok: " + getSide1();
     }
 
 }

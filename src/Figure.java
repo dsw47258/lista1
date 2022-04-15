@@ -1,20 +1,17 @@
+import java.util.HashMap;
 
-
-public interface Figure {
-    double getSide1();
-
-    double getSide2();
-
-    void min();
-
-    void max();
-
-    default double calculateTheAreaOfTheFigure() {
-        return getSide1() * getSide2();
+public class Figure {
+    private static HashMap<FigureType, FigureFactory> dictionary = new HashMap<>();
+    static {
+        dictionary.put(FigureType.Square, new SquareFactory());
+        dictionary.put(FigureType.Rectangle, new RectangleFactory());
+        dictionary.put(FigureType.Circle, new CircleFactory());
     }
 
-    default double calculateThePerimeterOfFigure() {
-        return (getSide1() + getSide2()) * 2;
-    }
 
+
+    public static IFigure createFigure(FigureType type)
+    {
+        return dictionary.get(type).createFigure();
+    }
 }

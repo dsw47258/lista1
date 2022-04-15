@@ -1,8 +1,12 @@
-public class Wheel implements Figure {
+public class Circle implements IFigure {
     private double r;
 
-    public Wheel(int r) {
+    public Circle(int r) {
         this.r = r;
+    }
+
+    public Circle() {
+
     }
 
     @Override
@@ -23,6 +27,11 @@ public class Wheel implements Figure {
     @Override
     public void max() {
         r *= Math.sqrt(2);
+    }
+
+    @Override
+    public String toString() {
+        return "Koło, jego promień: " + getSide1();
     }
 
     @Override

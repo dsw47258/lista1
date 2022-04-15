@@ -1,6 +1,6 @@
 
 
-public class Rectangle implements Figure {
+public class Rectangle implements IFigure {
     double side1;
     double side2;
 
@@ -31,15 +31,19 @@ public class Rectangle implements Figure {
         side2 *= Math.sqrt(2);
     }
 
+    @Override
+    public String toString() {
+        return "Prostokąt, jego boki: " + getSide1() + ", "+ getSide2();
+    }
 
     @Override
     public double calculateTheAreaOfTheFigure() {
-        return Figure.super.calculateTheAreaOfTheFigure();
+        return IFigure.super.calculateTheAreaOfTheFigure();
     }
 
     @Override
     public double calculateThePerimeterOfFigure() {
-        return Figure.super.calculateThePerimeterOfFigure();
+        return IFigure.super.calculateThePerimeterOfFigure();
     }
 
 }
